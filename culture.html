@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tamil Nadu Culture</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color:#e8f5e9;
+    margin:0;
+}
+
+h1{
+    text-align:center;
+    color:#0b3d2e;
+    margin-top:20px;
+}
+
+hr{width:60%;}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:20px;
+}
+
+.card{
+    width:280px;
+    margin:15px;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    text-align:center;
+    overflow:hidden;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    cursor:pointer;
+    transition:transform .4s;
+}
+
+.card img:hover{transform:scale(1.05);}
+
+.card h3{color:#1b5e20;margin:10px 0;}
+.card p{font-size:14px;color:#555;padding:0 10px 15px;}
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(11,61,46,.95);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    pointer-events:none;
+    transition:.5s;
+    z-index:1000;
+}
+
+.lightbox:target{opacity:1;pointer-events:auto;}
+
+.lb-content{text-align:center;animation:zoomfade .6s;}
+
+.lb-content img{
+    max-width:85%;
+    max-height:80vh;
+    border-radius:12px;
+}
+
+.caption{color:#fff;margin-top:15px;}
+.caption p{color:#c8e6c9;font-size:14px;}
+
+.close{
+    position:absolute;
+    top:20px;left:25px;
+    font-size:30px;
+    color:#fff;
+    text-decoration:none;
+}
+
+@keyframes zoomfade{
+    from{opacity:0;transform:scale(.85);}
+    to{opacity:1;transform:scale(1);}
+}
+
+.back{text-align:center;margin:30px;}
+.back a{color:#0b3d2e;font-weight:bold;text-decoration:none;}
+</style>
+</head>
+
+<body>
+
+<h1>Tamil Nadu Culture</h1>
+<hr>
+
+<div class="container">
+
+<div class="card"><a href="#pongal"><img src="images/pongal.jpg.jpeg"></a><h3>Pongal</h3><p>Harvest festival of Tamil Nadu.</p></div>
+<div class="card"><a href="#diwali"><img src="images/diwali.jpg.jpeg"></a><h3>Diwali</h3><p>Festival of lights.</p></div>
+<div class="card"><a href="#ramzan"><img src="images/ramzan.jpg.jpeg"></a><h3>Ramzan</h3><p>Festival of fasting & unity.</p></div>
+<div class="card"><a href="#christmas"><img src="images/christmas.jpg.jpeg"></a><h3>Christmas</h3><p>Celebration of joy & peace.</p></div>
+<div class="card"><a href="#bharatanatyam"><img src="images/bharatanatyam.jpg.jpeg"></a><h3>Bharatanatyam</h3><p>Classical dance form.</p></div>
+<div class="card"><a href="#carnatic"><img src="images/carnatic.jpg.jpeg"></a><h3>Carnatic Music</h3><p>Devotional classical music.</p></div>
+<div class="card"><a href="#jallikattu"><img src="images/jallikattu.jpg.jpeg"></a><h3>Jallikattu</h3><p>Traditional sport.</p></div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div id="pongal" class="lightbox"><a href="#" class="close">←</a><div class="lb-content"><img src="images/pongal.jpg.jpeg"><div class="caption"><h2>Pongal</h2><p>Harvest festival thanking nature.</p></div></div></div>
+<div id="diwali" class="lightbox"><a href="#" class="close">←</a><div class="lb-content"><img src="images/diwali.jpg.jpeg"><div class="caption"><h2>Diwali</h2><p>Victory of light over darkness.</p></div></div></div>
+<div id="ramzan" class="lightbox"><a href="#" class="close">←</a><div class="lb-content"><img src="images/ramzan.jpg.jpeg"><div class="caption"><h2>Ramzan</h2><p>Festival of peace & fasting.</p></div></div></div>
+<div id="christmas" class="lightbox"><a href="#" class="close">←</a><div class="lb-content"><img src="images/christmas.jpg.jpeg"><div class="caption"><h2>Christmas</h2><p>Celebrated with joy and prayers.</p></div></div></div>
+<div id="bharatanatyam" class="lightbox"><a href="#" class="close">←</a><div class="lb-content"><img src="images/bharatanatyam.jpg.jpeg"><div class="caption"><h2>Bharatanatyam</h2><p>Graceful classical dance.</p></div></div></div>
+<div id="carnatic" class="lightbox"><a href="#" class="close">←</a><div class="lb-content"><img src="images/carnatic.jpg.jpeg"><div class="caption"><h2>Carnatic Music</h2><p>Traditional music form.</p></div></div></div>
+<div id="jallikattu" class="lightbox"><a href="#" class="close">←</a><div class="lb-content"><img src="images/jallikattu.jpg.jpeg"><div class="caption"><h2>Jallikattu</h2><p>Symbol of Tamil heritage.</p></div></div></div>
+
+<div class="back"><a href="home.html">⬅ Back to Home</a></div>
+
+</body>
+</html>

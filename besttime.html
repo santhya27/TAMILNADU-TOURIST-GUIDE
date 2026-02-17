@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Best Time to Visit Tamil Nadu</title>
+
+<style>
+body{font-family:Arial;background:#e8f5e9;margin:0;}
+h1{text-align:center;color:#0b3d2e;margin-top:20px;}
+hr{width:60%;}
+
+.container{
+display:flex;flex-wrap:wrap;justify-content:center;padding:20px;
+}
+
+.card{
+width:280px;margin:15px;background:#fff;border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,.15);text-align:center;overflow:hidden;
+}
+
+.card img{width:100%;height:180px;object-fit:cover;cursor:pointer;}
+.card h3{color:#1b5e20;margin:10px;}
+.card p{font-size:14px;color:#555;padding:0 10px 15px;}
+
+.lightbox{
+position:fixed;inset:0;background:rgba(11,61,46,.95);
+display:flex;align-items:center;justify-content:center;
+opacity:0;pointer-events:none;transition:.5s;z-index:1000;
+}
+.lightbox:target{opacity:1;pointer-events:auto;}
+
+.lb-content{text-align:center;animation:zoomfade .6s;}
+.lb-content img{max-width:85%;max-height:80vh;border-radius:12px;}
+
+.caption{color:#fff;margin-top:15px;}
+.caption p{color:#c8e6c9;font-size:14px;}
+
+.close{position:absolute;top:20px;left:25px;font-size:30px;color:#fff;text-decoration:none;}
+
+@keyframes zoomfade{
+from{opacity:0;transform:scale(.85);}
+to{opacity:1;transform:scale(1);}
+}
+
+.back{text-align:center;margin:30px;}
+.back a{color:#0b3d2e;font-weight:bold;text-decoration:none;}
+</style>
+</head>
+
+<body>
+
+<h1>Best Time to Visit Tamil Nadu</h1>
+<hr>
+
+<div class="container">
+
+<div class="card"><a href="#jan"><img src="images/madurai.jpg.jpeg"></a><h3>Jan – Feb</h3><p>Madurai, Thanjavur – Festivals & temples</p></div>
+<div class="card"><a href="#mar"><img src="images/chennai.jpg.jpeg"></a><h3>Mar – Apr</h3><p>Chennai, Kanchipuram</p></div>
+<div class="card"><a href="#may"><img src="images/ooty.jpg.jpeg"></a><h3>May – Jun</h3><p>Ooty, Kodaikanal – Hill stations</p></div>
+<div class="card"><a href="#jul"><img src="images/salem.jpg.jpeg"></a><h3>Jul – Aug</h3><p>Salem, Yercaud – Greenery</p></div>
+<div class="card"><a href="#sep"><img src="images/kanyakumari.jpg.jpeg"></a><h3>Sep – Oct</h3><p>Kanyakumari, Pondicherry</p></div>
+<div class="card"><a href="#nov"><img src="images/pondicherry.jpg.jpeg"></a><h3>Nov – Dec</h3><p>Beach & cultural tourism</p></div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div id="jan" class="lightbox"><a href="#" class="close">←</a><div class="lb-content"><img src="images/madurai.jpg.jpeg"><div class="caption"><h2>January – February</h2><p>Pongal festivals and temple tours.</p></div></div></div>
+<div id="mar" class="lightbox"><a href="#" class="close">←</a><div class="lb-content"><img src="images/chennai.jpg.jpeg"><div class="caption"><h2>March – April</h2><p>Temple visits and cultural events.</p></div></div></div>
+<div id="may" class="lightbox"><a href="#" class="close">←</a><div class="lb-content"><img src="images/ooty.jpg.jpeg"><div class="caption"><h2>May – June</h2><p>Cool hill station escapes.</p></div></div></div>
+<div id="jul" class="lightbox"><a href="#" class="close">←</a><div class="lb-content"><img src="images/salem.jpg.jpeg"><div class="caption"><h2>July – August</h2><p>Monsoon greenery & temples.</p></div></div></div>
+<div id="sep" class="lightbox"><a href="#" class="close">←</a><div class="lb-content"><img src="images/kanyakumari.jpg.jpeg"><div class="caption"><h2>September – October</h2><p>Coastal climate & Navaratri.</p></div></div></div>
+<div id="nov" class="lightbox"><a href="#" class="close">←</a><div class="lb-content"><img src="images/pondicherry.jpg.jpeg"><div class="caption"><h2>November – December</h2><p>Beach weather & festivals.</p></div></div></div>
+
+<div class="back"><a href="home.html">⬅ Back to Home</a></div>
+
+</body>
+</html>

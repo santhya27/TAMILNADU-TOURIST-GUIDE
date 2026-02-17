@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tourist Places in Tamil Nadu</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #0b3d2e;
+        }
+
+        hr {
+            width: 60%;
+        }
+
+        /* Cards layout */
+        .places-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .place-card {
+            width: 280px;
+            margin: 15px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .place-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.4s;
+        }
+
+        .place-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .place-card h3 {
+            margin: 12px 0 5px;
+            color: #1b5e20;
+        }
+
+        .place-card p {
+            padding: 0 10px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* ---------- LIGHTBOX ---------- */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(11, 61, 46, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+            z-index: 1000;
+        }
+
+        .lightbox:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-content {
+            text-align: center;
+            animation: fadeZoom 0.6s ease;
+        }
+
+        .lightbox img {
+            max-width: 85%;
+            max-height: 80vh;
+            border-radius: 12px;
+            box-shadow: 0 0 25px #000;
+        }
+
+        .caption {
+            margin-top: 15px;
+            color: white;
+        }
+
+        .caption h2 {
+            margin: 5px 0;
+        }
+
+        .caption p {
+            font-size: 14px;
+            color: #c8e6c9;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            font-size: 30px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .close:hover {
+            color: #a5d6a7;
+        }
+
+        @keyframes fadeZoom {
+            from {
+                opacity: 0;
+                transform: scale(0.85);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .place-card {
+                width: 90%;
+            }
+        }
+
+        .back {
+            text-align: center;
+            margin: 30px;
+        }
+
+        .back a {
+            text-decoration: none;
+            color: #0b3d2e;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Tourist Places in Tamil Nadu</h1>
+<hr>
+
+<div class="places-container">
+
+    <!-- CARDS -->
+    <div class="place-card"><a href="#chennai"><img src="images/chennai.jpg.jpeg"></a><h3>Chennai</h3><p>Marina Beach and culture.</p></div>
+    <div class="place-card"><a href="#ooty"><img src="images/ooty.jpg.jpeg"></a><h3>Ooty</h3><p>Queen of hill stations.</p></div>
+    <div class="place-card"><a href="#madurai"><img src="images/madurai.jpg.jpeg"></a><h3>Madurai</h3><p>Meenakshi Amman Temple.</p></div>
+    <div class="place-card"><a href="#kodaikanal"><img src="images/kodaikanal.jpg.jpeg"></a><h3>Kodaikanal</h3><p>Princess of hill stations.</p></div>
+    <div class="place-card"><a href="#rameswaram"><img src="images/rameswaram.jpg.jpeg"></a><h3>Rameswaram</h3><p>Famous pilgrimage site.</p></div>
+    <div class="place-card"><a href="#kanyakumari"><img src="images/kanyakumari.jpg.jpeg"></a><h3>Kanyakumari</h3><p>Southernmost tip of India.</p></div>
+    <div class="place-card"><a href="#kanchipuram"><img src="images/kanchipuram.jpg.jpeg"></a><h3>Kanchipuram</h3><p>City of thousand temples.</p></div>
+    <div class="place-card"><a href="#thanjavur"><img src="images/thanjavur.jpg.jpeg"></a><h3>Thanjavur</h3><p>Brihadeeswarar Temple.</p></div>
+    <div class="place-card"><a href="#pondicherry"><img src="images/pondicherry.jpg.jpeg"></a><h3>Pondicherry</h3><p>French colonial heritage.</p></div>
+    <div class="place-card"><a href="#salem"><img src="images/salem.jpg.jpeg"></a><h3>Salem – Subramaniya Swamy Temple</h3><p>Murugan temple near Yercaud.</p></div>
+
+</div>
+
+<!-- LIGHTBOX VIEWS -->
+<div id="chennai" class="lightbox"><a href="#" class="close">←</a><div class="lightbox-content"><img src="images/chennai.jpg.jpeg"><div class="caption"><h2>Chennai</h2><p>Capital city famous for Marina Beach.</p></div></div></div>
+
+<div id="ooty" class="lightbox"><a href="#" class="close">←</a><div class="lightbox-content"><img src="images/ooty.jpg.jpeg"><div class="caption"><h2>Ooty</h2><p>Cool climate and tea gardens.</p></div></div></div>
+
+<div id="madurai" class="lightbox"><a href="#" class="close">←</a><div class="lightbox-content"><img src="images/madurai.jpg.jpeg"><div class="caption"><h2>Madurai</h2><p>Ancient temple city.</p></div></div></div>
+
+<div id="kodaikanal" class="lightbox"><a href="#" class="close">←</a><div class="lightbox-content"><img src="images/kodaikanal.jpg.jpeg"><div class="caption"><h2>Kodaikanal</h2><p>Misty hills and lakes.</p></div></div></div>
+
+<div id="rameswaram" class="lightbox"><a href="#" class="close">←</a><div class="lightbox-content"><img src="images/rameswaram.jpg.jpeg"><div class="caption"><h2>Rameswaram</h2><p>Holy island pilgrimage.</p></div></div></div>
+
+<div id="kanyakumari" class="lightbox"><a href="#" class="close">←</a><div class="lightbox-content"><img src="images/kanyakumari.jpg.jpeg"><div class="caption"><h2>Kanyakumari</h2><p>Sunrise and sunset views.</p></div></div></div>
+
+<div id="kanchipuram" class="lightbox"><a href="#" class="close">←</a><div class="lightbox-content"><img src="images/kanchipuram.jpg.jpeg"><div class="caption"><h2>Kanchipuram</h2><p>Silk sarees & temples.</p></div></div></div>
+
+<div id="thanjavur" class="lightbox"><a href="#" class="close">←</a><div class="lightbox-content"><img src="images/thanjavur.jpg.jpeg"><div class="caption"><h2>Thanjavur</h2><p>Chola architecture.</p></div></div></div>
+
+<div id="pondicherry" class="lightbox"><a href="#" class="close">←</a><div class="lightbox-content"><img src="images/pondicherry.jpg.jpeg"><div class="caption"><h2>Pondicherry</h2><p>French streets & beaches.</p></div></div></div>
+
+<div id="salem" class="lightbox"><a href="#" class="close">←</a><div class="lightbox-content"><img src="images/salem.jpg.jpeg"><div class="caption"><h2>Salem</h2><p>Murugan temple near Yercaud.</p></div></div></div>
+
+<div class="back">
+    <a href="home.html">⬅ Back to Home</a>
+</div>
+
+</body>
+</html>
